@@ -1,6 +1,7 @@
+
 module.exports = {
-  title: "vuepress-theme-reco",
-  description: 'A simple and beautiful vuepress blog theme .',
+  title: "海边的小溪鱼",
+  description: '人生如逆旅，我亦是行人',
   dest: 'example/docs/public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -10,17 +11,20 @@ module.exports = {
   theme: require.resolve('../../../'),
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/', icon: 'reco-home' },
-      { text: 'TimeLine', link: '/timeLine/', icon: 'reco-date' },
-      { text: 'Contact',
+      { text: '首页', link: '/', icon: 'reco-home' },
+      { text: '时间轴', link: '/timeLine/', icon: 'reco-date' },
+      { text: '联系',
         icon: 'reco-message',
         items: [
-          { text: 'NPM', link: 'https://www.npmjs.com/~reco_luan', icon: 'reco-npm' },
-          { text: 'GitHub', link: 'https://github.com/recoluan', icon: 'reco-github' },
-          { text: '简书', link: 'https://www.jianshu.com/u/cd674a19515e', icon: 'reco-jianshu' },
-          { text: 'CSDN', link: 'https://blog.csdn.net/recoluan', icon: 'reco-csdn' },
-          { text: '博客圆', link: 'https://www.cnblogs.com/luanhewei/', icon: 'reco-bokeyuan' },
-          { text: 'WeChat', link: 'https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A', icon: 'reco-wechat' },
+          //{ text: 'NPM', link: 'https://www.npmjs.com/~reco_luan', icon: 'reco-npm' },
+          { text: 'CSDN', link: 'https://blog.csdn.net/m0_37903882', icon: 'reco-csdn' },
+          { text: 'GitHub', link: 'https://github.com/DuebassLei', icon: 'reco-github' },
+          { text: '简书', link: 'https://www.jianshu.com/u/6740c2a5866d', icon: 'reco-jianshu' },
+          { text: '掘金', link: 'https://juejin.im/user/5aa1029c51882555770c0603', icon: 'reco-juejin' },
+          { text: '码云', link: 'https://gitee.com/DuebassLei', icon: 'reco-mayun' },
+          { text: '知乎', link: 'https://www.zhihu.com/people/gao-lei-79-95/activities', icon: 'reco-zhihu' }
+          // { text: '博客圆', link: 'https://www.cnblogs.com/luanhewei/', icon: 'reco-bokeyuan' },
+         // { text: 'WeChat', link: 'https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A', icon: 'reco-wechat' },
         ]
       }
     ],
@@ -29,11 +33,11 @@ module.exports = {
     blogConfig: {
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: 'Category' // 默认 “分类”
+        text: '分类' // 默认 “分类”
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
-        text: 'Tag' // 默认 “标签”
+        text: '标签' // 默认 “标签”
       }
     },
     logo: '/head.png',
@@ -45,11 +49,11 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: 'reco_luan',
+    author: 'DuebassLei',
     // 备案号
-    record: 'xxxx',
+    record: 'github pages',
     // 项目开始时间
-    startYear: '2017',
+    startYear: '2018',
     /**
      * 密钥 (if your blog is private)
      */
@@ -64,10 +68,10 @@ module.exports = {
      * valine 设置 (if you need valine comment )
      */
 
-    // valineConfig: {
-    //   appId: '...',// your appId
-    //   appKey: '...', // your appKey
-    // }
+    valineConfig: {
+      appId: 'uFQFtFXij22g7A1mEcSbrOeV-gzGzoHsz',// your appId
+      appKey: 'jJfllLrLraFAWscO036Fwabp', // your appKey
+    },
     vssueConfig: {
       admins: ['recoluan'],
       platform: 'github',
@@ -76,9 +80,9 @@ module.exports = {
       clientId: '4d81cea3b3d8aac8e88e',
       clientSecret: 'd23e8556b6d3c85abffbf4b8d853afb2ea08875a',
     },
-    keyPage: {
-      keys: ['123456']
-    },
+    // keyPage: {
+    //   keys: ['123456']
+    // },
     friendLink: [
       {
         title: '午后南杂',

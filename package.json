@@ -7,23 +7,24 @@
     "dev": "vuepress dev example/docs",
     "build": "vuepress build example/docs",
     "eslint-ext": "eslint --ext .js,.vue ./",
-    "eslint-fix": "eslint --fix --ext .js,.vue ./"
+    "eslint-fix": "eslint --fix --ext .js,.vue ./",
+    "deploy": "bash deploy.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuepress-reco/vuepress-theme-reco.git"
+    "url": "git+https://github.com/DuebassLei/vuepress-theme-reco.git"
   },
   "keywords": [
     "vuepress",
     "vue",
     "theme"
   ],
-  "author": "reco_luan",
+  "author": "DuebassLei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuepress-reco/vuepress-theme-reco/issues"
+    "url": "https://github.com/DuebassLei/vuepress-theme-reco/issues"
   },
-  "homepage": "https://vuepress-theme-reco.recoluan.com",
+  "homepage": "https://www.gaosanshi.top",
   "_from": "vuepress-theme-reco@0.2.1",
   "_resolved": "http://registry.npm.taobao.org/vuepress-theme-reco/download/vuepress-theme-reco-0.2.1.tgz",
   "dependencies": {

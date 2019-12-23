@@ -4,7 +4,7 @@ date: 2019-12-05
 tags:
  - centos
 categories:
- - Centos
+ - Linux
 ---
 
 ## 下载Node

@@ -4,7 +4,7 @@ date: 2019-12-06
 tags:
  - centos
 categories:
- - Centos
+ - Linux
 ---
  
 ## 前言

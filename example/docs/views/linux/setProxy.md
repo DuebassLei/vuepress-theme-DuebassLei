@@ -4,7 +4,7 @@ date: 2019-12-07
 tags:
  - proxy
 categories:
- - Proxy
+ - Linux
 ---
 
 ## Git代理设置

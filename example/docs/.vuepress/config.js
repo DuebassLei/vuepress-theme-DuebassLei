@@ -55,6 +55,16 @@ module.exports = {
     // 项目开始时间
     startYear: '2018',
     /**
+     *  GitHub Repository
+     */
+    repo: 'DuebassLei/vuepress-theme-reco',
+    // // 假如文档不是放在仓库的根目录下：
+    docsDir: 'example/docs',
+    // // 假如文档放在一个特定的分支下：
+    docsBranch: 'develop',
+    // 默认是 false, 设置为 true 来启用
+    editLinks: true,
+    /**
      * 密钥 (if your blog is private)
      */
 

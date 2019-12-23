@@ -1,5 +1,5 @@
 ---
-title: JavaScript Tools
+title: JavaScript 工具方法总结
 date: 2019-12-02
 categories:
   - JavaScript
@@ -7,7 +7,7 @@ tags:
   - javascript
 ---
 
->因为工作中经常用到这些方法，所有便把这些方法进行了总结。
+因为工作中经常用到这些方法，所有便把这些方法进行了总结。
 ## type 类型判断
 ```js
 isString (o) { //是否字符串

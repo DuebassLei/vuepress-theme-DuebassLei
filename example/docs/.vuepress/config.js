@@ -51,7 +51,7 @@ module.exports = {
     // 作者
     author: 'DuebassLei',
     // 备案号
-    record: 'github pages',
+    record: '海边的小溪鱼',
     // 项目开始时间
     startYear: '2018',
     /**
@@ -100,5 +100,8 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true
-  }
+  },
+  plugins: [
+    require('./plugins/notification/index')
+  ]
 }

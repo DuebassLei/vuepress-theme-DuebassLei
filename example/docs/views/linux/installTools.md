@@ -2,9 +2,9 @@
 title: Centos安装Node,Npm,Yarn
 date: 2019-12-05
 tags:
- - Centos
-categories:
  - centos
+categories:
+ - Centos
 ---
 
 ## 下载Node

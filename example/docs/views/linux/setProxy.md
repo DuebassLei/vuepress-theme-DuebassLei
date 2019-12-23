@@ -2,9 +2,9 @@
 title: 常见代理设置
 date: 2019-12-07
 tags:
- - Proxy
-categories:
  - proxy
+categories:
+ - Proxy
 ---
 
 ## Git代理设置

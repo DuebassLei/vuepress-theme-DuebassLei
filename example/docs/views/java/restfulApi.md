@@ -1,14 +1,12 @@
 ---
-title: restful API
+title: RESTful API 实践
 date: 2019-12-22
 categories:
   - Java
 tags:
   - java
 ---
-
-## :heart: RESTful API
-
+## RESTful API实践
 ###  Methods方法
 
 ```bash
@@ -44,9 +42,9 @@ Content-Type: application/json
 }
 ```
 
-## :heart: `request.getParameter()`
+## `request.getParameter()`
 
-> 获取参数为`null`和`""`空字符串的区别
+ 获取参数为`null`和`""`空字符串的区别
 
 ### `""`空字符串
 
@@ -56,7 +54,7 @@ Content-Type: application/json
 
 当`url`里没有`name`属性,`request.getParameter("name")`获取的值是`null`
 
-## :heart: 提取双引号中间的值（`regex`）
+##  提取双引号中间的值（`regex`）
 
 ```java
 String str1 = "\"小明\"";

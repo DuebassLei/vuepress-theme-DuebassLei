@@ -6,9 +6,7 @@ categories:
 tags:
   - other
 ---
-
 不定期更新在学习/工作/生活中所了解的优秀的软件/工具/网站，做个在线备忘录。
-<!-- more -->
 ## `emoji`图标
 - [EmojiPc](http://www.emojipc.com/)    :hugs:
 - [EmojiSearcher](https://emoji.muan.co/) :hugs:

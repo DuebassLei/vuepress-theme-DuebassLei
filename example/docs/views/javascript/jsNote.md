@@ -1,5 +1,5 @@
 ---
-title: JavaScript 常用总结
+title: JavaScript 笔记
 date: 2019-12-04
 categories:
   - JavaScript
@@ -63,7 +63,7 @@ console.log(Object.keys(varObj)); // console: ['5', '8', '120']
 
 > 在[可迭代对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 [`Array`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Array)，[`Map`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Map)，[`Set`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)，[`String`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/String)，[`TypedArray`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)，[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
 
-####  迭代Array
+### 迭代Array
 
 ```javascript
 let iterable = [10, 20, 30];
@@ -94,7 +94,7 @@ for (const value of iterable) {
 // 30
 ```
 
-####  ​迭代String
+### ​迭代String
 
 ```javascript
 let iterable = "boo";
@@ -109,7 +109,7 @@ for (let value of iterable) {
 
 ```
 
-####  迭代Map
+###  迭代Map
 
 ```javascript
 let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
@@ -129,7 +129,7 @@ for (let [key, value] of iterable) {
 // 3
 ```
 
-####  ​迭代Set
+###  ​迭代Set
 
 ```js
 let iterable = new Set([1, 1, 2, 2, 3, 3]);

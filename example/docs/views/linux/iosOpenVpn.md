@@ -2,9 +2,9 @@
 title: Ios配置 openVPN 客户端
 date: 2019-12-06
 tags:
- - Centos
-categories:
  - centos
+categories:
+ - Centos
 ---
  
 ## 前言

@@ -1,10 +1,10 @@
 ---
 title: Eslint 常用配置
 date: 2019-12-03
+categories:
+ - Vue
 tags:
  - Vue
-categories:
- - vue
 ---
 
 ## 常用配置

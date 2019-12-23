@@ -1,5 +1,5 @@
 ---
-title: Css Tools
+title: Css 常用样式
 date: 2019-12-03
 tags:
  - Css
@@ -7,7 +7,7 @@ categories:
  - css
 ---
 
-## :bookmark:  pc-reset PC样式初始化
+##   pc-reset PC样式初始化
 ```css
 /* normalize.css */
 
@@ -671,7 +671,7 @@ input[type="text"] {
   -webkit-appearance: none;
 }
 ```
-## :bookmark:公共样式提取
+##  公共样式提取
 ```css
 /* 禁止选中文本 */
 .usn{
@@ -841,13 +841,13 @@ input[type="text"] {
 }
 ```
 
-## :bookmark:常用样式块
+## 常用样式块
 ```html
 <style>
     cursor: pointer;
 </style>
 ```
 ::: tip STOP
-以上都是经常用到的方法
+以上都是经常用到一些CSS的代码块
 :::   
 

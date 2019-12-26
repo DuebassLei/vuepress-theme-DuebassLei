@@ -9,18 +9,11 @@
 
 ## 简述
 
-记录在不断地学习过程中所记录的笔记
+A simple and beautiful vuepress Blog & Doc theme.
 
 ## :star: Find Me
 
-| :four_leaf_clover:csdn博客 | [博客 Home](https://blog.csdn.net/m0_37903882)              |
-| -------------------------- | ----------------------------------------------------------- |
-| :car:掘金                  | [掘金Home](https://juejin.im/user/5aa1029c51882555770c0603) |
-| :apple:简书                | [简书Home](https://www.jianshu.com/u/6740c2a5866d)          |
-| :beer: ​Github              | [GitHub Home](https://github.com/DuebassLei)                |
-| :bird:码云                 | [Gitee码云](https://gitee.com/DuebassLei)                   |
-
-:smile: [海边的小溪鱼个人网站](https://duebasslei.gitee.io/)
+:smile: [海边的小溪鱼个人网站](https://www.gaosanshi.top/)
 
 :email: 1130122701@qq.com
 

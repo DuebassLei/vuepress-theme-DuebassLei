@@ -9,7 +9,7 @@
           <h1>{{o.author}}</h1>
           <p >{{o.description}}</p>
           <div class="action_btn">
-            <el-button type="text" class="button"><a href="o.url"  target="_blank" :style="{color:'#000'}">{{o.action}}</a></el-button>
+            <el-button type="text" class="button"><a :href="o.url"  target="_blank" :style="{color:'#000'}">{{o.action}}</a></el-button>
           </div>
         </div>
       </el-card>
@@ -23,7 +23,7 @@
           <h1>{{o.author}}</h1>
           <p >{{o.description}}</p>
           <div class="action_btn">
-            <el-button type="text" class="button"><a href="o.url"  target="_blank" :style="{color:'#000'}">{{o.action}}</a></el-button>
+            <el-button type="text" class="button"><a :href="o.url"  target="_blank" :style="{color:'#000'}">{{o.action}}</a></el-button>
           </div>
         </div>
       </el-card>

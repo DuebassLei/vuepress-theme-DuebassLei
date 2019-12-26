@@ -63,7 +63,7 @@ module.exports = {
     /**
      *  GitHub Repository
      */
-    repo: 'DuebassLei/vuepress-theme-reco',
+    repo: 'DuebassLei/vuepress-theme-DuebassLei',
     // // 假如文档不是放在仓库的根目录下：
     docsDir: 'example/docs',
     // // 假如文档放在一个特定的分支下：

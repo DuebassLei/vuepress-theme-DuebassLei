@@ -1,5 +1,5 @@
 ---
-title: Array 转 Tree(平铺结构转树形层级结构)
+title: Array 转 Tree平铺结构转树形层级结构
 date: 2019-12-08
 categories:
   - Vue
@@ -8,54 +8,55 @@ tags:
 ---
 
 ## 需求
-从后端接口获取数据，将List<T>集合以Json形式返回，返回数据形如下所示，现为了前端以树形结构展示，需将一维数据转化为树形结构。
+
+从后端接口获取数据，将`List<T>`集合以`Json`形式返回，返回数据形如下所示，现为了前端以树形结构展示，需将一维数据转化为树形结构。
+
 ```json
 [
-          {
-            'groupId': '1',
-            'appId': 'M78',
-            'groupCode': '1',
-            'parentId': 0,
-            'name': '火星情报局',
-            'treePath': 'gSLWUyPnLu',
-            'orderNum': '0003',
-            'status': true,
-            'comments': '火星情报局总部'
-          },
-          {
-
-            'groupId': '2-1',
-            'appId': 'M78',
-            'groupCode': '2-1',
-            'parentId': '1',
-            'name': '火星情报局2-1',
-            'treePath': '5lqfrdymqsll8wrb0yu4i8rp.sh0yadschu7l5t0jalsftnzj.o9i5pcfcort29b7b5uh7nv5j',
-            'orderNum': '000100010002',
-            'status': true,
-            'comments': '来自火星情报局'
-          },
-          {
-            'groupId': '2-2',
-            'appId': 'M78',
-            'groupCode': '2-2',
-            'parentId': '1',
-            'name': '火星情报局2-2',
-            'treePath': '5lqfrdymqsll8wrb0yu4i8rp.sh0yadschu7l5t0jalsftnzj.o8nnru8w5sqf6km2wa0rm1so',
-            'orderNum': '000100010002',
-            'status': true,
-            'comments': '来自火星情报局'
-          },
-          {
-            'groupId': '2-1-1',
-            'appId': 'M78',
-            'groupCode': '4',
-            'parentId': '2-1',
-            'name': '火星情报局2-1-1',
-            'treePath': '5lqfrdymqsll8wrb0yu4i8rp.nqkskjl03rg78rb5k5okfpm2',
-            'orderNum': '00010001',
-            'status': true,
-            'comments': '来自火星情报局'
-          }
+  {
+    "groupId": "1",
+    "appId": "M78",
+    "groupCode": "1",
+    "parentId": 0,
+    "name": "火星情报局",
+    "treePath": "gSLWUyPnLu",
+    "orderNum": "0003",
+    "status": true,
+    "comments": "火星情报局总部"
+  },
+  {
+    "groupId": "2-1",
+    "appId": "M78",
+    "groupCode": "2-1",
+    "parentId": "1",
+    "name": "火星情报局2-1",
+    "treePath": "5lqfrdymqsll8wrb0yu4i8rp.sh0yadschu7l5t0jalsftnzj.o9i5pcfcort29b7b5uh7nv5j",
+    "orderNum": "000100010002",
+    "status": true,
+    "comments": "来自火星情报局"
+  },
+  {
+    "groupId": "2-2",
+    "appId": "M78",
+    "groupCode": "2-2",
+    "parentId": "1",
+    "name": "火星情报局2-2",
+    "treePath": "5lqfrdymqsll8wrb0yu4i8rp.sh0yadschu7l5t0jalsftnzj.o8nnru8w5sqf6km2wa0rm1so",
+    "orderNum": "000100010002",
+    "status": true,
+    "comments": "来自火星情报局"
+  },
+  {
+    "groupId": "2-1-1",
+    "appId": "M78",
+    "groupCode": "4",
+    "parentId": "2-1",
+    "name": "火星情报局2-1-1",
+    "treePath": "5lqfrdymqsll8wrb0yu4i8rp.nqkskjl03rg78rb5k5okfpm2",
+    "orderNum": "00010001",
+    "status": true,
+    "comments": "来自火星情报局"
+  }
 ]
 ```
 ## 主要逻辑
@@ -65,7 +66,8 @@ tags:
 - ${groupId}   ID
 
 ```javascript
- arrayConvertTree (list = []) {
+<script>
+ function arrayConvertTree (list = []) {
       const data = JSON.parse(JSON.stringify(list)) 
       const result = []
       if (!Array.isArray(data)) {
@@ -104,7 +106,7 @@ console.log(tree)
 
 ![效果](../../../../images/arrayConvertTree2.png)
 
-```javascript
+```html
 <template>
   <a-card
     :bordered="false"

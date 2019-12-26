@@ -38,7 +38,12 @@ module.exports = {
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
         text: '标签' // 默认 “标签”
-      }
+      },
+      tools: {
+        location: 4, // 在导航栏菜单中所占的位置，默认4
+        text: '收藏' // 默认 “工具”
+      },
+
     },
     logo: '/head.png',
     // 搜索设置
@@ -54,6 +59,7 @@ module.exports = {
     record: '海边的小溪鱼',
     // 项目开始时间
     startYear: '2018',
+    editLinkText:"编辑该页面",
     /**
      *  GitHub Repository
      */
@@ -81,6 +87,7 @@ module.exports = {
     valineConfig: {
       appId: 'uFQFtFXij22g7A1mEcSbrOeV-gzGzoHsz',// your appId
       appKey: 'jJfllLrLraFAWscO036Fwabp', // your appKey
+      placeholder: '欢迎留言与我分享您的想法...'
     },
     vssueConfig: {
       admins: ['recoluan'],
@@ -112,6 +119,7 @@ module.exports = {
     lineNumbers: true
   },
   plugins: [
-    require('./plugins/notification/index')
+    require('./plugins/notification/index'),
+    require('./plugins/element/index')
   ]
 }

@@ -88,6 +88,14 @@ export default {
           return true
         }
       })
+      // 工具
+      const isHasTools = userNav.some(item => {
+        if (blogConfig.tools) {
+          return item.text === (blogConfig.tools.text || '收藏')
+        } else {
+          return true
+        }
+      })
 
       if (!isHasCategory && Object.hasOwnProperty.call(blogConfig, 'category')) {
         const category = blogConfig.category
@@ -112,7 +120,15 @@ export default {
           icon: 'reco-tag'
         })
       }
-
+      if (!isHasTools && Object.hasOwnProperty.call(blogConfig, 'tools')) {
+        const tag = blogConfig.tools
+        userNav.splice(parseInt(tag.location || 4) - 1, 0, {
+          link: '/tools/',
+          text: tag.text || '收藏',
+          type: 'links',
+          icon: 'reco-coding'
+        })
+      }
       return userNav
     },
 

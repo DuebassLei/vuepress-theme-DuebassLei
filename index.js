@@ -47,6 +47,13 @@ module.exports = (options, ctx) => ({
           scopeLayout: 'Category'
         },
         {
+          id: 'tools',
+          keys: ['tools'],
+          path: '/tools/',
+          layout: 'Tools',
+          scopeLayout: 'Tools'
+        },
+        {
           id: 'timeline',
           keys: ['timeline'],
           path: '/timeline/',

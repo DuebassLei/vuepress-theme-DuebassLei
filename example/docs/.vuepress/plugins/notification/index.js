@@ -17,7 +17,7 @@ module.exports = (options, context) => ({
       VISIBILITY_HEIGHT: visibilityHeight || 400
     }
   },
-  name: '@vuepress-reco/vuepress-plugin-notification',
+  name: '@DuebassLei/vuepress-plugin-notification',
   enhanceAppFiles: [
     path.resolve(__dirname, './bin/enhanceAppFile.js')
   ],

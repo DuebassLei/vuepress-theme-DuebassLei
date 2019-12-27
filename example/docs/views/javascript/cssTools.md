@@ -2,9 +2,9 @@
 title: Css 常用样式
 date: 2019-12-03
 tags:
- - Css
-categories:
  - css
+categories:
+ - Css
 ---
 
 ##   pc-reset PC样式初始化

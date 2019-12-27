@@ -1,22 +1,24 @@
 <template>
   <transition name="fade">
+     <el-card>
     <div v-if="visible" class="notification-wrapper">
       <h4 class="notification-title">
         <i class="iconfont reco-tongzhi"></i>
-        <span>小站更新啦 🎉🎉🎉</span>
+        <span>关注公众号🤞🤞🤞</span>
         <i class="btn-close" @click="closeNote">
           <svg t="1573745677073" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4448" width="22" height="22"><path d="M512 34.133333a486.4 486.4 0 1 0 486.4 486.4A486.4 486.4 0 0 0 512 34.133333z m209.4848 632.8064l-55.6032 55.466667-151.517867-151.125333-151.517866 151.1168-55.6032-55.466667 151.517866-151.108267L307.242667 364.714667l55.6032-55.466667 151.517866 151.125333 151.517867-151.1168 55.6032 55.466667-151.517867 151.099733z m0 0" p-id="4449"></path></svg>
         </i>
       </h4>
       <div class="notification-content">
-        <img :src="require('./rvcode.png')" alt="">
+        <img :src="require('./weChat.jpg')" alt="">
       </div>
       <div style="padding: 0 16px">
-        <h3 style="color: #000000;font-style:italic">通知</h3>
-        <h5 class="msg-one" >使用Vuepress开发的vuepress-theme-reco搭建个人博客</h5>
-        <h5 class="msg-two">本站部署在Github Pages，主题适配暗色/亮色模式，喜欢尝鲜的朋友可以开始尝试了，有问题欢迎加微信交流！</h5>
+        <p>→「技术干货」每日推送</p>
+        <p>→「免费资料」随时领取</p>
+        <p>→「精选壁纸」每周福利 </p>
       </div>
     </div>
+    </el-card>
   </transition>
 </template>
 
@@ -44,10 +46,10 @@
 <style lang="stylus" scoped>
   .notification-wrapper
     position fixed
-    top 80px
+    bottom  40px
     right 20px
     z-index 19
-    width 260px
+    width 220px
     box-sizing border-box
     background #fff
     border 1px solid #3eaf7c
@@ -57,7 +59,7 @@
     .notification-title
       position relative
       box-sizing border-box
-      padding 10px
+      padding 12px
       margin 0
       background #3eaf7c
       color #fff
@@ -77,7 +79,8 @@
           fill #fff
     .notification-content
       box-sizing border-box
-      padding 10px
+      padding 20px
+      margin-bottom -25px
       img
         width 100%
   .fade-enter-active, .fade-leave-active {

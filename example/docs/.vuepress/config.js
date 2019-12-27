@@ -1,7 +1,7 @@
 
 module.exports = {
   title: "海边的小溪鱼",
-  description: '人生如逆旅，我亦是行人',
+  description: 'Study Programs And Record Life',
   dest: 'example/docs/public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -46,6 +46,7 @@ module.exports = {
 
     },
     logo: '/head.png',
+    heroImage:"/bg.png",
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -102,17 +103,32 @@ module.exports = {
     // },
     friendLink: [
       {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com'
+        title: 'SpringCloud中文索引',
+        desc: '优秀开源项目及博客资源汇总',
+        // email: '1130122701@qq.com',
+        link: 'http://springcloud.fun/'
       },
       {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
+        title: 'Docker中文社区',
+        desc: 'Docker中文资源汇集地',
+        link: 'http://www.docker.org.cn/'
       },
+      {
+        title: 'JavaGuide',
+        desc: '可能是你见过总结最好的Java基础知识点',
+        // avatar: "",
+        link: 'https://javaguide.cn/'
+      },
+      {
+        title: '前端资源开发库',
+        desc: '前端组件资源库Vue,React,Angular',
+        link: 'https://www.awesomes.cn/'
+      },
+      {
+        title: '创造师导航',
+        desc: '为创意工作者而设计',
+        link: 'http://chuangzaoshi.com/'
+      }
     ]
   },
   markdown: {

@@ -55,11 +55,11 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: 'DuebassLei',
+    author: '高三石',
     // 备案号
-    record: '海边的小溪鱼',
+    record: '黔ICP备20001108号',
     // 项目开始时间
-    startYear: '2018',
+    startYear: '2019',
     editLinkText:"编辑该页面",
     /**
      *  GitHub Repository

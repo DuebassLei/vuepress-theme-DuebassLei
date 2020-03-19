@@ -4,7 +4,8 @@
       <div
         class="mask"
         :style="{
-      background: `url(${$frontmatter.bgImage ? $withBase($frontmatter.bgImage) : require('../images/home-bg.jpg')}) center/cover no-repeat`}"></div>
+      background: `url(${$frontmatter.bgImage ? $withBase($frontmatter.bgImage) : require('../images/home-bg.jpg')}) center/cover no-repeat`}">
+      </div>
       <ModuleTransition>
         <img
           v-if="recoShowModule && $frontmatter.heroImage"

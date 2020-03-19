@@ -3,8 +3,8 @@
     <Common :sidebar="false" :isComment="false">
       <!-- 标签集合 -->
       <ModuleTransition>
-        <!-- 收藏 -->
-        <favorite></favorite>
+        <!-- 画廊相册 -->
+        <gallery></gallery>
       </ModuleTransition>
 
       <!-- 博客列表 -->
@@ -23,6 +23,7 @@
   import Common from '@theme/components/Common'
   import ModuleTransition from '@theme/components/ModuleTransition'
   import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
+
 
   export default {
     mixins: [moduleTransitonMixin],

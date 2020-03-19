@@ -54,6 +54,20 @@ module.exports = (options, ctx) => ({
           scopeLayout: 'Tools'
         },
         {
+          id: 'photo',
+          keys: ['photo'],
+          path: '/photo/',
+          layout: 'Photo',
+          scopeLayout: 'Photo'
+        },
+        {
+          id: 'about',
+          keys: ['about'],
+          path: '/about/',
+          layout: 'About',
+          scopeLayout: 'About'
+        },
+        {
           id: 'timeline',
           keys: ['timeline'],
           path: '/timeline/',

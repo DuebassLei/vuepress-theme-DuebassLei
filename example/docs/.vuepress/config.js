@@ -43,10 +43,16 @@ module.exports = {
         location: 4, // 在导航栏菜单中所占的位置，默认4
         text: '收藏' // 默认 “工具”
       },
-
+      photo: {
+        location: 5, // 在导航栏菜单中所占的位置，默认5
+        text: '画廊' // 默认 “工具”
+      },
+      about: {
+        location: 6, // 在导航栏菜单中所占的位置，默认6
+        text: '关于' // 默认 “关于”
+      },
     },
     logo: '/head.png',
-    heroImage:"/bg.png",
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -58,6 +64,8 @@ module.exports = {
     author: '高三石',
     // 备案号
     record: '黔ICP备20001108号',
+    // 备案号跳转官网
+    recordLink: 'http://beian.miit.gov.cn/',
     // 项目开始时间
     startYear: '2019',
     editLinkText:"编辑该页面",

@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <span>
       <i class="iconfont reco-theme"></i>
-      <a target="blank" href="https://github.com/DuebassLei/vuepress-theme-DuebassLei">vuepress-theme-DuebassLei</a>
+      <a target="blank" href="https://github.com/DuebassLei/vuepress-theme-DuebassLei">Vuepress-Theme-DuebassLei</a>
     </span>
     <span v-if="$themeConfig.record">
       <i class="iconfont reco-beian"></i>

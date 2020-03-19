@@ -96,6 +96,24 @@ export default {
           return true
         }
       })
+      // 画廊相册
+      const isHasPhoto = userNav.some(item => {
+        if (blogConfig.photo) {
+          return item.text === (blogConfig.photo.text || '画廊')
+        } else {
+          return true
+        }
+      })
+
+
+      // 关于
+      const isHasAbout = userNav.some(item => {
+        if (blogConfig.about) {
+          return item.text === (blogConfig.about.text || '关于')
+        } else {
+          return true
+        }
+      })
 
       if (!isHasCategory && Object.hasOwnProperty.call(blogConfig, 'category')) {
         const category = blogConfig.category
@@ -126,7 +144,25 @@ export default {
           link: '/tools/',
           text: tag.text || '收藏',
           type: 'links',
-          icon: 'reco-coding'
+          icon: 'reco-document'
+        })
+      }
+      if (!isHasPhoto && Object.hasOwnProperty.call(blogConfig, 'photo')) {
+        const tag = blogConfig.photo
+        userNav.splice(parseInt(tag.location || 5) - 1, 0, {
+          link: '/photo/',
+          text: tag.text || '画廊',
+          type: 'links',
+          icon: 'reco-douyin'
+        })
+      }
+      if (!isHasAbout && Object.hasOwnProperty.call(blogConfig, 'about')) {
+        const tag = blogConfig.about
+        userNav.splice(parseInt(tag.location || 6) - 1, 0, {
+          link: '/about/',
+          text: tag.text || '关于',
+          type: 'links',
+          icon: 'reco-friend'
         })
       }
       return userNav

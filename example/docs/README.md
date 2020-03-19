@@ -1,20 +1,8 @@
 ---
 home: true
-bgImage:  '/blog-bg'
-bgImageStyle:
-- height: '250px'
-- textAlign: 'center'
-- overflow: 'hidden'
-# heroImage: /hero.png
-# heroImageStyle: {
-#   maxWidth: '600px',
-#   width: '100%',
-#   display: block,
-#   margin: '9rem auto 2rem',
-#   background: '#fff',
-#   borderRadius: '1rem',
-# }
-# isShowTitleInHome: false
+bgImage:  /blog-bg.png
+#heroImage: /hero.png
+#isShowTitleInHome: false
 # actionText: Guide
 # actionLink: /views/other/guide
 # features:

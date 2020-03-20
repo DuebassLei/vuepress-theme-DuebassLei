@@ -61,11 +61,11 @@ module.exports = (options, ctx) => ({
           scopeLayout: 'Photo'
         },
         {
-          id: 'about',
-          keys: ['about'],
-          path: '/about/',
-          layout: 'About',
-          scopeLayout: 'About'
+          id: 'friends',
+          keys: ['friends'],
+          path: '/friends/',
+          layout: 'Friends',
+          scopeLayout: 'Friends'
         },
         {
           id: 'timeline',

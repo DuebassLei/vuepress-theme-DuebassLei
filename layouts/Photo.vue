@@ -1,19 +1,10 @@
 <template>
   <div class="tags-wrapper">
-    <Common :sidebar="false" :isComment="false">
+    <Common :sidebar="false" :isComment="true">
       <!-- 标签集合 -->
       <ModuleTransition>
         <!-- 画廊相册 -->
         <gallery></gallery>
-      </ModuleTransition>
-
-      <!-- 博客列表 -->
-      <ModuleTransition delay="0.08">
-
-      </ModuleTransition>
-
-      <!-- 分页 -->
-      <ModuleTransition delay="0.16">
       </ModuleTransition>
     </Common>
   </div>

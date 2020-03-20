@@ -1,37 +1,23 @@
 <template>
   <div id="gallery">
-    <h1>画廊</h1>
+    <h3>🎈2020年春节</h3>
+    <p><i>再见19，喜迎20，因为疫情能好好在家陪家人过了一很长的春节，找回了想要守护的她</i>👫</p>
     <el-row>
       <el-col :span="8" v-for="(o, index) in data1" :key="index">
         <el-card :body-style="{ padding: '0px' }" :style="{margin:'10px',borderRadius:'5%'}">
-          <el-avatar :size="size" :src="o.imgUrl"></el-avatar>
-          <div style="padding: 14px;">
-            <h1>{{o.author}}</h1>
-            <p >{{o.description}}</p>
-            <div class="action_btn">
-              <el-button type="text" class="button"><a :href="o.url"  target="_blank" :style="{color:'#000'}">{{o.action}}</a></el-button>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="8" v-for="(o, index) in data2" :key="index">
-        <el-card :body-style="{ padding: '0px' }" :style="{margin:'10px',borderRadius:'5%'}">
-          <el-avatar :size="size" :src="o.imgUrl"></el-avatar>
-          <div style="padding: 14px;">
-            <h1>{{o.author}}</h1>
-            <p >{{o.description}}</p>
-            <div class="action_btn">
-              <el-button type="text" class="button"><a :href="o.url"  target="_blank" :style="{color:'#000'}">{{o.action}}</a></el-button>
-            </div>
-          </div>
+          <el-image :size="size" :src="o.imgUrl"></el-image>
+<!--          <div style="padding: 14px;">-->
+<!--            <h1>{{o.author}}</h1>-->
+<!--            <p >{{o.description}}</p>-->
+<!--            <div class="action_btn">-->
+<!--              <el-button type="text" class="button"><a :href="o.url"  target="_blank" :style="{color:'#000'}">{{o.action}}</a></el-button>-->
+<!--            </div>-->
+<!--          </div>-->
         </el-card>
       </el-col>
     </el-row>
   </div>
 </template>
-
 <script>
   export default {
     name:"gallery",
@@ -40,48 +26,67 @@
         size: 150,
         data1:[
           {
-            author:"Convertio",
-            description:"多文件格式转换",
-            url:"https://convertio.co/zh/",
+            name:"兰花",
+            description:"",
+            url:"",
             action:"前往",
-            imgUrl:require('../public/image/0001.png')
+            imgUrl:require('../public/photo/ps2.jpg')
           },
           {
-            author:"TinyPNG",
-            description:"图片无损压缩",
-            url:"https://tinypng.com/",
+            author:"",
+            description:"",
+            url:"",
             action:"前往",
-            imgUrl:require('../public/image/0002.png')
+            imgUrl:require('../public/photo/ps3.jpg')
           },
           {
-            author:"Typora",
-            description:"Markdown 编辑器",
-            url:"https://www.typora.io/",
+            author:"",
+            description:"",
+            url:"",
             action:"前往",
-            imgUrl:require('../public/image/0003.png')
-          }
-        ],
-        data2:[
-          {
-            author:"Licecap",
-            description:"屏幕录制工具",
-            url:"https://licecap.en.softonic.com/",
-            action:"前往",
-            imgUrl:require('../public/image/0004.png')
+            imgUrl:require('../public/photo/ps4.jpg')
           },
           {
-            author:"Processon",
-            description:"专业作图聚合工具",
-            url:"https://www.processon.com/",
+            author:"",
+            description:"",
+            url:"",
             action:"前往",
-            imgUrl:require('../public/image/0005.png')
+            imgUrl:require('../public/photo/ps5.jpg')
           },
           {
-            author:"CCleaner",
-            description:"轻量 PC 优化工具",
-            url:"https://www.ccleaner.com/",
+            author:"",
+            description:"",
+            url:"",
             action:"前往",
-            imgUrl:require('../public/image/0006.png')
+            imgUrl:require('../public/photo/ps6.jpg')
+          },
+          {
+            author:"",
+            description:"",
+            url:"",
+            action:"前往",
+            imgUrl:require('../public/photo/ps7.jpg')
+          },
+          {
+            author:"",
+            description:"",
+            url:"",
+            action:"前往",
+            imgUrl:require('../public/photo/ps8.jpg')
+          },
+          {
+            author:"",
+            description:"",
+            url:"",
+            action:"前往",
+            imgUrl:require('../public/photo/ps9.jpg')
+          },
+          {
+            author:"",
+            description:"",
+            url:"",
+            action:"前往",
+            imgUrl:require('../public/photo/ps10.jpg')
           }
         ]
       }
@@ -92,9 +97,9 @@
   .el-card{
     text-align center
     .image{
-      margin-top 15px
-      width 75%
-      height 75%
+      margin-top 10px
+      width 100%
+      height 100%
       border-radius 50%
     }
   }

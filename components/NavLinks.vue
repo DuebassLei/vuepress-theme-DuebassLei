@@ -107,9 +107,9 @@ export default {
 
 
       // 关于
-      const isHasAbout = userNav.some(item => {
-        if (blogConfig.about) {
-          return item.text === (blogConfig.about.text || '关于')
+      const isHasFriends = userNav.some(item => {
+        if (blogConfig.friends) {
+          return item.text === (blogConfig.friends.text || '关于')
         } else {
           return true
         }
@@ -156,10 +156,10 @@ export default {
           icon: 'reco-douyin'
         })
       }
-      if (!isHasAbout && Object.hasOwnProperty.call(blogConfig, 'about')) {
-        const tag = blogConfig.about
+      if (!isHasFriends && Object.hasOwnProperty.call(blogConfig, 'friends')) {
+        const tag = blogConfig.friends
         userNav.splice(parseInt(tag.location || 6) - 1, 0, {
-          link: '/about/',
+          link: '/friends/',
           text: tag.text || '关于',
           type: 'links',
           icon: 'reco-friend'

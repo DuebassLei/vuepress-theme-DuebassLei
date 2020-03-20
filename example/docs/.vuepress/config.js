@@ -47,7 +47,7 @@ module.exports = {
         location: 5, // 在导航栏菜单中所占的位置，默认5
         text: '画廊' // 默认 “工具”
       },
-      about: {
+      friends: {
         location: 6, // 在导航栏菜单中所占的位置，默认6
         text: '关于' // 默认 “关于”
       },
@@ -135,7 +135,8 @@ module.exports = {
       {
         title: '创造师导航',
         desc: '为创意工作者而设计',
-        link: 'http://chuangzaoshi.com/'
+        link: 'http://chuangzaoshi.com/',
+        logo: 'https://bref.life/images/avatar.png?v=1584454065343'
       }
     ]
   },

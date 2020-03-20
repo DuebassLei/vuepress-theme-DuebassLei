@@ -3,8 +3,8 @@
     <Common :sidebar="false" :isComment="false">
       <!-- 标签集合 -->
       <ModuleTransition>
-        <!-- 画廊相册 -->
-        <about></about>
+        <!-- 关于 -->
+        <myself></myself>
       </ModuleTransition>
 
       <!-- 博客列表 -->

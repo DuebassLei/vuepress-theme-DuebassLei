@@ -3,7 +3,6 @@ title: Cordova+Vue打包Android Apk
 date: 2020-03-23
 categories:
   - Vue
-  - Android
 tags:
   - vue
   - android

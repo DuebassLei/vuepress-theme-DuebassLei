@@ -3,7 +3,6 @@ title:  Windows下Intellij IDEA实现Docker部署SpringCloud项目
 date: 2020-01-19
 categories:
   - Docker
-  - SpringCloud
 tags:
   - docker
   - springcloud

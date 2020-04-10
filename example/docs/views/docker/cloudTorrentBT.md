@@ -3,7 +3,6 @@ title: 使用阿里云服务器Centos7环境下载BT文件
 date: 2020-01-09
 categories:
   - Docker
-  - Linux
 tags:
   - docker
   - linux

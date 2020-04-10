@@ -3,8 +3,6 @@ title: Docker安装Oracle 12c
 date: 2020-03-26
 categories:
   - Docker
-  - Linux
-  - Oracle
 tags:
   - docker
   - linux

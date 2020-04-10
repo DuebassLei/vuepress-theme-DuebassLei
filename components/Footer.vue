@@ -1,8 +1,12 @@
 <template>
   <div class="footer-wrapper">
+    <p style="color: #2c3e50">
+      🔔本站遵循MIT开源协议，内容仅供用于学习和交流，请勿用于商业用途，转载请注明出处及原文链接。
+    </p>
+
     <span>
       <i class="iconfont reco-theme"></i>
-      <a target="blank" href="https://github.com/DuebassLei/vuepress-theme-DuebassLei">Vuepress-Theme-DuebassLei</a>
+      <a target="blank" href="https://github.com/DuebassLei/vuepress-theme-DuebassLei">主题 Vuepress-Theme-DuebassLei</a>
     </span>
     <span v-if="$themeConfig.record">
       <i class="iconfont reco-beian"></i>
@@ -13,7 +17,7 @@
       <a>
         <span v-if="$themeConfig.startYear">{{ $themeConfig.startYear }} - </span>
         {{ year }}
-        &nbsp;&nbsp;
+        &nbsp;&nbsp;🌱
         <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</span>
       </a>
     </span>

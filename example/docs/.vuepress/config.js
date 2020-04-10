@@ -61,7 +61,7 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: '高三石',
+    author: 'DuebassLei',
     // 备案号
     record: '黔ICP备20001108号',
     // 备案号跳转官网

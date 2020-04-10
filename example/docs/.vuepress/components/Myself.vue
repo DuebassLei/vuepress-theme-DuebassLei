@@ -116,6 +116,18 @@
 </script>
 
 <style scoped>
+  #myself{
+    font-size: 16px;
+    color: rgb(62, 62, 62);
+    line-height: 1.6;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    font-family: 'Helvetica Neue',Helvetica,'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%),
+    linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);
+    background-size: 20px 20px;
+    background-position: center center;
+  }
   .github-usercard {
     font: 13px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333333;

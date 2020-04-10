@@ -1,7 +1,7 @@
 <template>
   <div id="gallery">
     <h3>🎈2020年春节</h3>
-    <p><i>再见19，喜迎20，因为疫情能好好在家陪家人过了一很长的春节，找回了想要守护的她</i>👫</p>
+    <p><i>再见19，喜迎20，Record Life</i></p>
     <el-row>
       <el-col :span="8" v-for="(o, index) in data1" :key="index">
         <el-card :body-style="{ padding: '0px' }" :style="{margin:'10px',borderRadius:'5%'}">

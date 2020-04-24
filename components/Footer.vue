@@ -3,10 +3,13 @@
     <p style="color: #2c3e50">
       🔔本站遵循MIT开源协议，内容仅供用于学习和交流，请勿用于商业用途，转载请注明出处及原文链接。
     </p>
-
     <span>
       <i class="iconfont reco-theme"></i>
-      <a target="blank" href="https://github.com/DuebassLei/vuepress-theme-DuebassLei">主题 Vuepress-Theme-DuebassLei</a>
+      <a target="blank" href="https://github.com/DuebassLei/vuepress-theme-DuebassLei">Vuepress-theme-reco@1.2.0(原主题)</a>
+    </span>
+    <span>
+      🍀
+      <a target="blank" href="https://github.com/DuebassLei/vuepress-theme-DuebassLei">Vuepress-Theme-DuebassLei(个性化)</a>
     </span>
     <span v-if="$themeConfig.record">
       <i class="iconfont reco-beian"></i>

@@ -111,6 +111,18 @@ module.exports = {
     // },
     friendLink: [
       {
+        title: '午后南杂',
+        desc: 'Enjoy when you can, and endure when you must',
+        // email: '1130122701@qq.com',
+        link: 'https://www.recoluan.com/'
+      },
+      {
+        title: 'vuepress-theme-reco',
+        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+        logo: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        link: 'https://vuepress-theme-reco.recoluan.com'
+      },
+      {
         title: 'SpringCloud中文索引',
         desc: '优秀开源项目及博客资源汇总',
         // email: '1130122701@qq.com',

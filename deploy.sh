@@ -9,8 +9,10 @@ npm run build
 # 进入生成的文件夹
 cd example/docs/public
 
+# 指定域名
 echo 'www.gaosanshi.top' > CNAME
 
+# git
 git init
 git add -A
 git commit -m 'deploy'

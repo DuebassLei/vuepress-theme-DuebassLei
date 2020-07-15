@@ -2,7 +2,7 @@
 <div id="favorite">
   <h1>在线工具备忘录</h1>
   <div class="note_book" id="output_wrapper_id">
-    <p class="p_css" class="p_css">Window下推荐</p>
+    <p class="p_css">Window下推荐</p>
     <ul class="ul_css" >
       <li class="ul_li_css"><span class="ul_li_span_css">Jetbrain全家桶 开发编辑器</span></li>
       <li class="ul_li_css"><span class="ul_li_span_css">X-shell  远程ssh工具</span></li>
@@ -18,7 +18,7 @@
     </ul>
     <p class="p_css">Mac下推荐：</p>
     <ul class="ul_css">
-      <li class="ul_li_css"><span class="ul_li_span_css">Jetbrain全家桶</span></li>
+      <li class="ul_li_css"><span  class="ul_li_span_css">Jetbrain全家桶</span></li>
       <li class="ul_li_css"><span class="ul_li_span_css">Typora+upic来写markdown</span></li>
       <li class="ul_li_css"><span class="ul_li_span_css">iTerm终端</span></li>
       <li class="ul_li_css"><span class="ul_li_span_css">Transmit Mac最强FTP工具</span></li>

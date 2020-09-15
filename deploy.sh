@@ -10,7 +10,7 @@ npm run build
 cd example/docs/public
 
 # 指定域名
-echo 'www.gaosanshi.top' > CNAME
+echo 'blog.gaosanshi.top' > CNAME
 
 # git
 git init

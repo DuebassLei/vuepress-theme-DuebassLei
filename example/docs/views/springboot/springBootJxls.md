@@ -7,6 +7,7 @@ tags:
   - springboot
 ---
 
+
 # Jxls 导出 Excel
 
 > Springboot 中使用 Jxls 导出 Excel
@@ -71,8 +72,7 @@ public class Fish {
 
 ## 定义`excel`模板
 
-![](https://imgkr2.cn-bj.ufileos.com/58890a70-e33a-407f-b8e6-5cb2634d178f.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=x3mz2ctbmhu%252FaZec5wYoANyl%252Bek%253D&Expires=1602583739)
-
+![](https://img-blog.csdnimg.cn/20201013133510801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3OTAzODgy,size_16,color_FFFFFF,t_70#pic_center)
 
 ## 定义控制器`JxlsController.java`
 
@@ -121,14 +121,15 @@ public class JxlsController {
 http://localhost:9999/api/jxls/export
 `
 
-![](https://imgkr2.cn-bj.ufileos.com/c2771ece-bc8c-44b6-a5f8-13ad75664d3f.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=xpdf3hY7vT0ef5U%252BKm4RBnvFI4g%253D&Expires=1602583884)
+
+![](https://img-blog.csdnimg.cn/20201013133430474.png#pic_center)
 
 
 ##导出数据效果
 
-![](https://imgkr2.cn-bj.ufileos.com/2ff76d28-593f-46a2-8e93-0cb8810eef5f.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=McZ7MDU7dbCfJZzaYLbms4QarDk%253D&Expires=1602584000)
+![](https://img-blog.csdnimg.cn/20201013133447430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3OTAzODgy,size_16,color_FFFFFF,t_70#pic_center)
 
 **更多功能详见`Jxls`官方`Api`**
 
 
-## 博文源码： [gitee/Duebasslei](https://gitee.com/DuebassLei/SpringCloudApp.git)
+## 博文源码： [gitee/Duebasslei](https://gitee.com/DuebassLei/SpringCloudApp)

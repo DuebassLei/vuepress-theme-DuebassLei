@@ -20,29 +20,29 @@
 </template>
 
 <script>
-  import Common from '@theme/components/Common'
-  import ModuleTransition from '@theme/components/ModuleTransition'
-  import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
+import Common from '@theme/components/Common'
+import ModuleTransition from '@theme/components/ModuleTransition'
+import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
-  export default {
-    mixins: [moduleTransitonMixin],
-    components: { Common,ModuleTransition },
-    data () {
-      return {
-      }
-    },
-
-    created () {
-
-    },
-
-    mounted () {
-
-    },
-
-    methods: {
+export default {
+  mixins: [moduleTransitonMixin],
+  components: { Common, ModuleTransition },
+  data () {
+    return {
     }
+  },
+
+  created () {
+
+  },
+
+  mounted () {
+
+  },
+
+  methods: {
   }
+}
 </script>
 
 <style src="../styles/theme.styl" lang="stylus"></style>

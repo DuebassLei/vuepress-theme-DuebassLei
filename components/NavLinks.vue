@@ -88,28 +88,28 @@ export default {
           return true
         }
       })
-      // 工具
-      const isHasTools = userNav.some(item => {
-        if (blogConfig.tools) {
-          return item.text === (blogConfig.tools.text || '收藏')
+      // 开源项目
+      const isHasOpenSource = userNav.some(item => {
+        if (blogConfig.openSource) {
+          return item.text === (blogConfig.openSource.text || '开源项目')
         } else {
           return true
         }
       })
-      // 画廊相册
-      const isHasPhoto = userNav.some(item => {
-        if (blogConfig.photo) {
-          return item.text === (blogConfig.photo.text || '画廊')
+      // 爱好
+      const isHasHobby = userNav.some(item => {
+        if (blogConfig.hobby) {
+          return item.text === (blogConfig.hobby.text || '爱好')
         } else {
           return true
         }
       })
 
 
-      // 关于
-      const isHasFriends = userNav.some(item => {
-        if (blogConfig.friends) {
-          return item.text === (blogConfig.friends.text || '关于')
+      // 关于我
+      const isHasMine = userNav.some(item => {
+        if (blogConfig.mine) {
+          return item.text === (blogConfig.mine.text || '关于我')
         } else {
           return true
         }
@@ -138,29 +138,61 @@ export default {
           icon: 'reco-tag'
         })
       }
-      if (!isHasTools && Object.hasOwnProperty.call(blogConfig, 'tools')) {
-        const tag = blogConfig.tools
+      if (!isHasOpenSource && Object.hasOwnProperty.call(blogConfig, 'openSource')) {
+        const tag = blogConfig.openSource
         userNav.splice(parseInt(tag.location || 4) - 1, 0, {
-          link: '/tools/',
-          text: tag.text || '收藏',
+          link: '/openSource/',
+          text: tag.text || '开源项目',
           type: 'links',
           icon: 'reco-document'
         })
       }
-      if (!isHasPhoto && Object.hasOwnProperty.call(blogConfig, 'photo')) {
-        const tag = blogConfig.photo
+      if (!isHasHobby && Object.hasOwnProperty.call(blogConfig, 'hobby')) {
+        const tag = blogConfig.hobby
         userNav.splice(parseInt(tag.location || 5) - 1, 0, {
-          link: '/photo/',
-          text: tag.text || '画廊',
+          //link: '/hobby/',
+          text: tag.text || '爱好',
           type: 'links',
-          icon: 'reco-douyin'
+          icon: 'reco-douyin',
+          items:[
+            {
+              text: "画廊",
+              link: "/hobby/",
+              type: 'links',
+              icon: "reco-douyin"
+            },
+            {
+              text: "电影",
+              link: "/movie/",
+              type: 'links',
+              icon: "reco-douyin"
+            },
+            {
+              text: "书单",
+              link: "/booklist/",
+              type: 'links',
+              icon: "reco-douyin"
+            },
+            {
+              text: "番剧",
+              link: "/cartoon/",
+              type: 'links',
+              icon: "reco-douyin"
+            },
+            {
+              text: "百宝箱",
+              link: "/chest/",
+              type: 'links',
+              icon: "reco-douyin"
+            },
+          ]
         })
       }
-      if (!isHasFriends && Object.hasOwnProperty.call(blogConfig, 'friends')) {
-        const tag = blogConfig.friends
+      if (!isHasMine && Object.hasOwnProperty.call(blogConfig, 'mine')) {
+        const tag = blogConfig.mine
         userNav.splice(parseInt(tag.location || 6) - 1, 0, {
-          link: '/friends/',
-          text: tag.text || '关于',
+          link: '/mine/',
+          text: tag.text || '关于我',
           type: 'links',
           icon: 'reco-friend'
         })

@@ -1,158 +1,80 @@
 <template>
 <div id="favorite">
-  <h1>在线工具备忘录</h1>
-  <div class="note_book" id="output_wrapper_id">
-    <p class="p_css">Window下推荐</p>
-    <ul class="ul_css" >
-      <li class="ul_li_css"><span class="ul_li_span_css">Jetbrain全家桶 开发编辑器</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">X-shell  远程ssh工具</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Postman 接口测试工具</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">PowerDesigner 数据库设计工具 </span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Navicat 数据库连接工具</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">RedisDesktop Redis客户端 </span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Typora+PicGo 来写markdown</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">ProcessOn  流程图</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">MindMaster  脑图 </span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Snipaste  截图工具</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">ScreenToGif Gif录制</span></li>
-    </ul>
-    <p class="p_css">Mac下推荐：</p>
-    <ul class="ul_css">
-      <li class="ul_li_css"><span  class="ul_li_span_css">Jetbrain全家桶</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Typora+upic来写markdown</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">iTerm终端</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Transmit Mac最强FTP工具</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">JumpDesktop Mac最强远程桌面工具（连接Win）</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">XMind 好用的脑图</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Medis Mac下好用好看的Redis可视化管理工具</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Dash Mac下超好用的离线文档</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">Shimo Mac下好用的VPN客户端（稳定~）</span></li>
-      <li class="ul_li_css"><span class="ul_li_span_css">最重要的一个：OBS （开直播好方便 (*￣︶￣)）</span></li>
-    </ul>
-  </div>
+    <el-row type="flex" justify="center">
+    <el-col :span="18" >
+      <el-card>
+        <div slot="header">
+          <span style="color: #46BD87">Vant-App移动端</span>
+          <a target="_blank" style="float: right; padding: 3px 0;color: #F56C6C;margin: 0 2px" href="https://github.com/DuebassLei/vant-app">Github仓库</a>
+          <a target="_blank" style="float: right; padding: 3px 0;color: #46BD87;margin: 0 2px" href="https://blog.gaosanshi.top/vant-app/">在线预览</a>
+        </div>
+        <div class="app_img">
+          <el-carousel :interval="4000" type="card" height="450px">
+            <el-carousel-item v-for="(item, index) in vantAppList" :key="index">
+              <el-image :src="item.url" size="145" lazy></el-image>
+            </el-carousel-item>
+        </el-carousel>
+        </div>
+        <div class="app_desc">
+          <div class="output_wrapper" id="output_wrapper_id" style="font-size: 15px; color: rgb(62, 62, 62); line-height: 1.8; word-spacing: 2px; letter-spacing: 2px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif; background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%); background-size: 20px 20px; background-position: center center;"><h2 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; font-size: 1.4em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">简介</span></h2>
+            <p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0.5em 0px;">一个弄着玩的APP，使用Vue全家桶VueCli3.x+Vant+Vuex+Vue-Router。</p>
+            <h2 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 0.5em 0px; font-weight: bold; font-size: 1.4em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">功能</span></h2>
+            <ul style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: disc;">
+              <li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">Vant 按需加载组件</span></li>
+              <li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">Vant 主题个性化定制</span></li>
+              <li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">移动端vw,rem适配</span></li>
+              <li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">Vuex,Vue-Router模块化</span></li>
+              <li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">axios组件http.js封装</span></li>
+            </ul>
+          </div>
+        </div>
+      </el-card>
+    </el-col>
+  </el-row>
+
 </div>
 </template>
 
 <script>
+const baseUrl = "https://duebasslei.gitee.io/picgopicturebed";
   export default {
     name:"favorite",
     data(){
       return{
         size: 150,
-        data1:[
+        vantAppList:[
           {
-            author:"Convertio",
-            description:"多文件格式转换",
-            url:"https://convertio.co/zh/",
-            action:"GO",
-            imgUrl:require('../public/image/0001.png')
+            desc: '首页',
+            url: `${baseUrl}/openSource/vant-app1.jpg`
           },
           {
-            author:"TinyPNG",
-            description:"图片无损压缩",
-            url:"https://tinypng.com/",
-            action:"GO",
-            imgUrl:require('../public/image/0002.png')
+            desc: '每日语录',
+            url: `${baseUrl}/openSource/vant-app2.jpg`
           },
           {
-            author:"Typora",
-            description:"Markdown 编辑器",
-            url:"https://www.typora.io/",
-            action:"GO",
-            imgUrl:require('../public/image/0003.png')
-          }
-        ],
-        data2:[
-          {
-            author:"Licecap",
-            description:"屏幕录制工具",
-            url:"https://licecap.en.softonic.com/",
-            action:"GO",
-            imgUrl:require('../public/image/0004.png')
+            desc: '每日语录',
+            url: `${baseUrl}/openSource/vant-app3.jpg`
           },
-          {
-            author:"Processon",
-            description:"专业作图聚合工具",
-            url:"https://www.processon.com/",
-            action:"GO",
-            imgUrl:require('../public/image/0005.png')
-          },
-          {
-            author:"CCleaner",
-            description:"轻量 PC 优化工具",
-            url:"https://www.ccleaner.com/",
-            action:"GO",
-            imgUrl:require('../public/image/0006.png')
-          }
-        ],
-        data3:[
-          {
-            author:"Xshell",
-            description:"远程SSH工具",
-            url:"http://www.netsarang.com/download/software.html",
-            action:"GO",
-            imgUrl:require('../public/image/0004.png')
-          },
-          {
-            author:"ScreenToGif",
-            description:"Gif图像屏幕录制",
-            url:"https://www.screentogif.com",
-            action:"GO",
-            imgUrl:require('../public/image/0005.png')
-          },
-          {
-            author:"Snipaste",
-            description:"Windows截图工具",
-            url:"https://www.snipaste.com",
-            action:"GO",
-            imgUrl:require('../public/image/0006.png')
-          }
+
         ]
       }
     }
   }
 </script>
-<style lang="stylus" scoped>
+<style lang="stylus" scoped >
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+}
 
-  .note_book{
-    font-size: 16px; color: rgb(62, 62, 62);
-    line-height: 1.6;
-    word-spacing: 0px;
-    letter-spacing: 0px;
-    font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
-    background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);
-    background-size: 20px 20px;
-    background-position: center center;
-  }
-  .p_css{
-    font-size: inherit;
-    color: inherit;
-    line-height: inherit;
-    padding: 0px;
-    margin: 1.5em 0px;
-  }
-  .ul_css{
-    font-size: inherit;
-    color: inherit;
-    line-height: inherit;
-    margin: 0px;
-    padding: 0px;
-    padding-left: 32px;
-    list-style-type: disc;
-  }
-  .ul_li_css{
-    font-size: inherit;
-    color: inherit;
-    line-height: inherit;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 0.5em;
-  }
-  .ul_li_span_css{
-    font-size: inherit;
-    color: inherit;
-    line-height: inherit;
-    margin: 0px;
-    padding: 0px;
-  }
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
+}
 </style>

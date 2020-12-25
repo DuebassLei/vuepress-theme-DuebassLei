@@ -13,7 +13,9 @@ A simple and beautiful vuepress Blog & Doc theme.
 
 ## :star: Find Me
 
-:smile: [海边的小溪鱼个人网站](https://www.gaosanshi.top/)
+- [海边的小溪鱼Github个人网站](https://blog.gaosanshi.top/)
+- [海边的小溪鱼Gitee个人网站](https://duebasslei.gitee.io)
+
 
 :email: 1130122701@qq.com
 

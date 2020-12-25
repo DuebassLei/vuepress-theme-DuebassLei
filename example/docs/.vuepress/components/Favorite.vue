@@ -2,7 +2,7 @@
 <div id="favorite">
     <el-row type="flex" justify="center">
     <el-col :span="18" >
-      <el-card>
+      <el-card :style="{borderRadius: '10px'}">
         <div slot="header">
           <span style="color: #46BD87">Vant-App移动端</span>
           <a target="_blank" style="float: right; padding: 3px 0;color: #F56C6C;margin: 0 2px" href="https://github.com/DuebassLei/vant-app">Github仓库</a>
@@ -11,7 +11,7 @@
         <div class="app_img">
           <el-carousel :interval="4000" type="card" height="450px">
             <el-carousel-item v-for="(item, index) in vantAppList" :key="index">
-              <el-image :src="item.url" size="145" lazy></el-image>
+              <el-image :src="item.url" size="145"></el-image>
             </el-carousel-item>
         </el-carousel>
         </div>

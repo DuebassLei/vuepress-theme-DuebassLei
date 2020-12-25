@@ -86,7 +86,27 @@ module.exports = (options, ctx) => ({
             layout: "Movie",
             scopeLayout: "Movie"
           },
-          
+          {
+            id: "book",
+            keys: ["book"],
+            path: "/book/",
+            layout: "Book",
+            scopeLayout: "Book"
+          },
+          {
+            id: "cartoon",
+            keys: ["cartoon"],
+            path: "/cartoon/",
+            layout: "Cartoon",
+            scopeLayout: "Cartoon"
+          },
+          {
+            id: "chest",
+            keys: ["chest"],
+            path: "/chest/",
+            layout: "Chest",
+            scopeLayout: "Chest"
+          }
         ]
       }
     ],

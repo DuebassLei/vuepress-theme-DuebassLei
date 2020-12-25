@@ -29,8 +29,15 @@
            </div>
        </el-row>
        <h3><el-tag effect="dark">博主简介</el-tag></h3>
-       <p>小白一枚，后端懂点Java，前端懂点Vue,移动端会点Android开发,争取早日成为一名全栈攻城狮✊</p>
+       <p>编程小白一枚，懂点Java、Vue,学习中✊</p>
        <p>In here,Study Programs And Record Life✍</p>
+       <h3><el-tag effect="dark">六诫</el-tag></h3>
+       <p>第一个向左:Don't be waver 不要左右摇摆，犹豫不决</p>
+       <p>第二个向前:Keeping forward 一直保持向前</p>
+       <p>第三个涂黑:Don't be angry 发怒是解决问题最坏的方式</p>
+       <p>第四个空心:You are nobody别太看得起自己，你谁都不是</p>
+       <p>第五个宝石型:Be strong 坚强起来,经历那么多坎坷没有什么能打倒你</p>
+       <p>第六个向右:make something right 尝试去做正确的事</p>
        <h3><el-tag effect="dark">友链交换</el-tag></h3>
        <el-tag>交换友链，请留言邮箱：<i><strong>1130122701@qq.com</strong></i>，示例格式：</el-tag>
        <el-card :style="{marginTop:'5px'}">

@@ -153,37 +153,37 @@ export default {
           //link: '/hobby/',
           text: tag.text || '爱好',
           type: 'links',
-          icon: 'reco-douyin',
+          icon: 'reco-category',
           items:[
             {
               text: "画廊",
               link: "/hobby/",
               type: 'links',
-              icon: "reco-douyin"
+              icon: "reco-tag"
             },
             {
               text: "电影",
               link: "/movie/",
               type: 'links',
-              icon: "reco-douyin"
+              icon: "reco-tag"
             },
             {
               text: "书单",
-              link: "/booklist/",
+              link: "/book/",
               type: 'links',
-              icon: "reco-douyin"
+              icon: "reco-tag"
             },
             {
               text: "番剧",
               link: "/cartoon/",
               type: 'links',
-              icon: "reco-douyin"
+              icon: "reco-tag"
             },
             {
               text: "百宝箱",
               link: "/chest/",
               type: 'links',
-              icon: "reco-douyin"
+              icon: "reco-tag"
             },
           ]
         })

@@ -1,201 +1,288 @@
 ---
-title: 二叉树遍历
-date: 2021-01-03
+title: 二叉树及DFS,BFS
+date: 2020-12-26
 categories:
   - Algorithm
 tags:
   - algorithm
 ---
 
-## 二叉树遍历
+## 生成`leetcode`二叉树
 
-- 深度优先遍历（`Depth First Search`, 简称 `DFS`） 
-- 广度优先遍历（`Breath First Search`,简称 `BFS`）
+在刷`leetcode `很多树题目的时候经常遇到这种情况:
 
->是图论中两种非常重要的算法，生产上广泛用于拓扑排序，寻路（走迷宫），搜索引擎，爬虫等，也频繁出现在 `leetcode`，高频面试题中。
+**示例：**
+二叉树：`[3,9,20,null,null,15,7]`,
+
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+
+发现测试的例子是一个数组 ，输入的数据是一个树形结构，每次手动的去创建比较麻烦，写了一个数组到树的一个小工具
+
+由于其中有`null `的情况所以用的是装箱类，实现过程也比较简单，就是先创建根节点然后在创建左右子树，在创建左右子树的时候依次的把左右子树加入到一个队列，如果为空就跳过，每次从队列中取出一个节点依次的把左右子树加入到一个队列,这样一直遍历下去直到把数组遍历完了。
+
 
 
 ```java
-import java.util.*;
+public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) {
+        this(val,null,null);
+    }
 
-/**
- * @author DuebassLei
- * @version 1.0
- * @date 2021/1/4 17:12
- * 二叉树
- */
-public class BinTree {
-    public BinTree left;
-    public BinTree right;
-    /**
-     * 根节点
-     * */
-    public BinTree root;
-    /**
-     * 数据域
-     * */
-    public Object data;
-    /**
-     * 存节点信息
-     * */
-    public List<BinTree> datas;
-
-    public BinTree(BinTree left, BinTree right, Object data) {
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
         this.left = left;
         this.right = right;
-        this.data = data;
-    }
-    /**
-     * 将初始的左右孩子值为空
-     * */
-    public BinTree(Object data){
-        this(null,null,data);
     }
 
-    public BinTree() {
-
-    }
     /**
-     * 通过一维数组构建出二叉树
-     * @param objs
+     * 构建 leetcode 二叉树
+     * @param nums
      * */
-    public void createBinTree(Object[] objs){
-        datas = new ArrayList<BinTree>();
-        //将一个数组的值依次转换为BinTree节点
-        for (Object o: objs) {
-            datas.add(new BinTree(o));
+    public static TreeNode generateTreeNode(Integer[] nums) {
+
+        if(nums==null||nums.length==0) {
+            return null;
         }
-        root = datas.get(0);
 
-        for (int i = 0; i < objs.length/2; i++) {
-            //左孩子
-            datas.get(i).left = datas.get(i*2 + 1);
-            //避免偶数的时候，下标越界
-            if(i*2+2 < datas.size()){
-                datas.get(i).right = datas.get(i*2 + 2);
+        int len=nums.length;
+        int index=0;
+
+        //初始化第一个节点
+        TreeNode head=new TreeNode(nums[index]);
+
+        Deque<TreeNode> nodeQueue = new LinkedList<>();
+        //插入元素，失败返回null或false
+        nodeQueue.offer(head);
+
+        TreeNode cur;
+        while (index<len){
+            index++;
+            if (index>=len) {
+                return head;
+            }
+            //移除元素
+            cur = nodeQueue.poll();
+
+            Integer left=nums[index];
+            if (left!=null){
+                cur.left=new TreeNode(left);
+                //插入
+                nodeQueue.offer(cur.left);
+            }
+
+            index++;
+            if (index>=len) {
+                return head;
+            }
+            Integer right=nums[index];
+            if (right!=null){
+                cur.right=new TreeNode(right);
+                //插入
+                nodeQueue.offer(cur.right);
             }
         }
+        return head;
     }
+
+    public static void main(String[] args) {
+        Integer[] data1={3,9,20,null,null,15,7};
+        TreeNode node =  generateTreeNode(data1);
+    } 
+}
+
+```
+
+
+
+## `BFS`和`DFS`
+
+### 深度优先遍历（`DFS`）
+
+- 递归写法（容易内存溢出）
+
+```java
     /**
-     * 深度优先遍历（dfs） 递归 先序遍历
-     * 特点：
-     * 递归表达性好，但是如果层级过深，很容易导致栈溢出
-     * @param node
-     * */
-    public  void dfsPreOrderTraverse(BinTree node) {
-        if (node == null)
-        { return;}
-        System.out.print(node.data + " ");
-        dfsPreOrderTraverse(node.left);
-        dfsPreOrderTraverse(node.right);
-    }
-    /**
-     * 深度优先遍历（dfs） 栈（推荐）
+     * DFS 深度优先遍历 (递归)
      * @param root
      * */
-    public  void dfsStack(BinTree root) {
+    public  static void dfsPreOrderTraverse(TreeNode root) {
+        if (root == null)
+        {
+            return;
+        }
+        System.out.print(root.val + " ");
+        dfsPreOrderTraverse(root.left);
+        dfsPreOrderTraverse(root.right);
+    }
+```
+
+
+
+- 栈写法（推荐）
+
+```java
+    /**
+     * DFS 深度优先遍历（stack栈）
+     * @param root
+     * */
+    public static void dfsWithStack(TreeNode root){
         if(root == null){
             return;
         }
-        Stack<BinTree> stack = new Stack<>();
-
-        //先将根节点压栈
+        Stack<TreeNode> stack = new Stack<>();
+        //进栈
         stack.push(root);
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()){
             //出栈
-            BinTree treeNode = stack.pop();
-
-            //遍历节点
-            // process(treeNode);
-            System.out.println(treeNode.data);
-            //先压右节点
-            if(treeNode.right != null){
-                stack.push(treeNode.right);
+            TreeNode node = stack.pop();
+            System.out.println(node.val);
+            if(node.right!= null){
+                stack.push(node.right);
             }
-
-            //在压左节点
-            if(treeNode.left != null){
-                stack.push(treeNode.left);
+            if(node.left!= null){
+                stack.push(node.left);
             }
         }
-
     }
+```
 
-    /**
-     * 广度优先遍历（bfs） 使用队列实现
-     * @param root
-     * */
-    public  void bfsQueue(BinTree root) {
+
+
+### 广度优先遍历（`BFS`）
+
+```java
+    public static void bfsTree(TreeNode root){
         if(root == null){
             return;
         }
-        Queue<BinTree> stack = new LinkedList<>();
-        stack.add(root);
-        int i= 0 ;
-        while(!stack.isEmpty()){
-            BinTree node = stack.poll();
-            System.out.println("value"+ node.data);
-            if(node.left != null ){
-                stack.add(node.left);
-            }
-            if(node.right != null ){
-                stack.add(node.right);
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        //入队
+        queue.add(root);
+        while (!queue.isEmpty()){
+            //出队
+            int size = queue.size();
+            TreeNode node = queue.poll();
+            System.out.println("遍历元素"+node.val);
+            for (int i = 0; i < size; i++) {
+                if(node.left != null){
+                    queue.add(node.left);
+                }
+                if(node.right != null){
+                    queue.add(node.right);
+                }
             }
         }
-        System.out.println(stack);
+    }
+```
+
+- 输出
+
+```
+遍历元素3
+遍历元素9
+遍历元素20
+遍历元素15
+遍历元素7
+```
+
+`BFS`常用场景：
+
+- 二叉树层序遍历
+- 求解最短路径问题
+
+##  层次遍历
+
+层次遍历并记录每层树节点并记录每层树节点（`leetcode 102`）
+
+```java
+	/**
+     * BFS 层次遍历记录每层树的节点
+     * */
+    public static List<List<Integer>> bfsSaveTreeNode(TreeNode root){
+        List<List<Integer>> res =new ArrayList<>();
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        if(root!=null){
+            //入队
+            queue.add(root);
+        }
+        while (!queue.isEmpty()){
+            //出队
+            int size = queue.size();
+            List<Integer> level = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                level.add(node.val);
+                if(node.left != null){
+                    queue.add(node.left);
+                }
+                if(node.right != null){
+                    queue.add(node.right);
+                }
+            }
+            res.add(level);
+        }
+        return res;
     }
 
-    /**
+```
+
+- 输出
+
+```
+[3]
+[9, 20]
+[15, 7]
+```
+
+
+
+
+
+
+
+## 树最大深度
+
+```java
+ /**
      * 获取树的最大深度
      * @param root
-     * @return
      * */
-    public int getMaxTreeDepth(BinTree root){
+    public static int getTreeDepth(TreeNode root){
         int leftDepth = 0;
         int rightDepth = 0;
-        if(root == null ){
-            return  0;
+        if(root == null){
+            return 0;
         }
         if(root.left != null){
-            leftDepth =  getMaxTreeDepth(root.left) +1;
+            leftDepth =  getTreeDepth(root.left) + 1;
         }
-        if(root.left != null){
-            rightDepth =  getMaxTreeDepth(root.left) +1;
+        if(root.right != null){
+            rightDepth =  getTreeDepth(root.right) + 1;
         }
         return Math.max(leftDepth,rightDepth);
     }
+```
 
-    /**
-     * 获取树的最小深度
-     * 特点：
-     *  当只有一个节点（左子树、右子树为空）的二叉树，最小深度为1
-     * @param root
-     * @return
-     * */
-    public int getMinTreeDepth(BinTree root){
-        if(root == null ){
-            return  0;
-        }
-        int minDepth = Integer.MAX_VALUE;
-        if(root.left == null && root.right == null){
-            return  1;
-        }
-        if(root.left != null){
-            minDepth = Math.min(getMinTreeDepth(root.left),minDepth);
-        }
-        if(root.left != null){
-            minDepth = Math.min(getMinTreeDepth(root.right),minDepth);
-        }
-        return minDepth + 1;
-    }
+## 叶子节点个数
 
-    /**
+```java
+   /**
      * 求二叉树种叶子节点的个数
      *
      * @param root
      * @return
      */
-    public  int getLeafNum(BinTree root) {
+    public static int getLeafNum(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -206,7 +293,13 @@ public class BinTree {
         int rightNum = getLeafNum(root.right);
         return leftNum + rightNum;
     }
+```
 
+
+
+## K层节点数
+
+```java
     /**
      * 求第K层节点个数
      *
@@ -214,7 +307,7 @@ public class BinTree {
      * @param k
      * @return
      */
-    public  int getNumForKLevel(BinTree root, int k) {
+    public static int getNumForKLevel(TreeNode root, int k) {
         if (root == null || k < 1) {
             return 0;
         }
@@ -225,41 +318,5 @@ public class BinTree {
         int rightNum = getNumForKLevel(root.right, k - 1);
         return leftNum + rightNum;
     }
-
-    /**
-     * 获取树的节点个数
-     * @param  root
-     * */
-    public int getTreeNodeNum(BinTree root) {
-        if (root == null) {
-            return 0;
-        }
-        return getTreeNodeNum(root.left) + getTreeNodeNum(root.right) + 1;
-    }
-
-
-    public static void main(String[] args) {
-        BinTree bintree=new BinTree();
-        Object []a={2,4,5,7,1,6,12,32,51,22};
-        bintree.createBinTree(a);
-
-        //dfs 深度优先遍历
-         //bintree.dfsPreOrderTraverse(bintree.root);
-        //bintree.dfsStack(bintree.root);
-
-        //bfs 广度优先遍历
-        bintree.bfsQueue(bintree.root);
-
-        //获取树的最大深度
-        //System.out.println(bintree.getMaxTreeDepth(bintree.root));
-
-//       //获取叶子节点数据
-//        bintree.getLeafNum(bintree.root);
-//       //求第K层节点个数
-//        bintree.getNumForKLevel(bintree.root,4);
-//        //获取树的节点个数
-//        System.out.println( bintree.getTreeNodeNum(bintree.root));
-
-    }
-}
 ```
+

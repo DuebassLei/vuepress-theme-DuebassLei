@@ -1,6 +1,6 @@
 ---
 title: vue使用crypto-js实现加密解密
-date: 2021-01-05
+date: 2020-11-05
 categories:
   - Vue
 tags:
@@ -22,7 +22,7 @@ npm install crypto-js -save
 ```js
 /**
  * @Author  DuebassLei
- * @Date  2021/1/5
+ * @Date  2020/11/5
  * @Version 1.0
  * @Description  CryptoJS封装工具
  */

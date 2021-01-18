@@ -5,7 +5,6 @@ categories:
   - Vue
 tags:
   - vue
-  - vant
 ---
 ## 前言
 >`Vant之van-picker`级联选择

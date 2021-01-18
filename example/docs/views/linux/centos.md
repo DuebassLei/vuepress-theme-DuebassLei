@@ -2,9 +2,9 @@
 title: Centos常用操作
 date: 2020-12-14
 categories:
-  - Centos
+  - Linux
 tags:
-  - linux
+  - centos
 ---
 
 ## yum镜像源更换

@@ -5,7 +5,6 @@ categories:
   - Docker
 tags:
   - docker
-  - minio
 ---
 
 ## 简介

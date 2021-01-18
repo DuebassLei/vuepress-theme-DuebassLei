@@ -5,7 +5,6 @@ categories:
   - SpringBoot
 tags:
   - springboot
-  - redis
 ---
 
 # Sprinboot之Redis集中式缓存

@@ -3,8 +3,6 @@ title: VSCode配置远程开发项目
 date: 2020-04-03
 categories:
  - Other
-tags:
- - vscode
 ---
 ## Visual Studio Code Insiders内测版
 [最新内测版下载地址](https://code.visualstudio.com/insiders/)

@@ -5,7 +5,6 @@ categories:
   - Vue
 tags:
   - vue
-  - vant
   - android
 ---
 ## Capacitor+Vue+Vant移动端打包总结

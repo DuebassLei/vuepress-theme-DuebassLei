@@ -5,7 +5,6 @@ categories:
   - React
 tags:
   - react
-  - router
 ---
 
 # React 之 React-Router

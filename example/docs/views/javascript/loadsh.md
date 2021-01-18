@@ -2,7 +2,7 @@
 title: Loadsh用法总结
 date: 2020-11-17
 categories:
-  - Javascript
+  - JavaScript
 tags:
   - javascript
 ---

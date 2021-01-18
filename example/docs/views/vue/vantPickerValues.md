@@ -5,7 +5,6 @@ categories:
   - Vue
 tags:
   - vue
-  - vant
 ---
 ## 前言
 >使用`Vant`的`picker`级联选择返回多个字段数据信息

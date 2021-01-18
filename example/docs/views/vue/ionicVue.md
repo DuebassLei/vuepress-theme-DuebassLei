@@ -4,7 +4,6 @@ date: 2019-12-31
 categories:
   - Vue
 tags:
-  - ionic
   - vue
 ---
 ## 创建vue项目

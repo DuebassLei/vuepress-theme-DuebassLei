@@ -4,7 +4,7 @@ date: 2019-12-03
 categories:
  - Vue
 tags:
- - Vue
+ - vue
 ---
 
 ## 常用配置

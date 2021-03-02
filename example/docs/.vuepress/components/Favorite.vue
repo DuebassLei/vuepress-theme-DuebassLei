@@ -48,12 +48,15 @@ const baseUrl = "https://duebasslei.gitee.io/picgopicturebed";
             url: `${baseUrl}/openSource/vant-app1.jpg`
           },
           {
-            desc: '每日语录',
-            url: `${baseUrl}/openSource/vant-app2.jpg`
+            desc: '小说列表',
+            // url: `${baseUrl}/openSource/vant-app2.jpg`
+            url: `${baseUrl}/openSource/20210302163330.png`
+
+
           },
           {
-            desc: '每日语录',
-            url: `${baseUrl}/openSource/vant-app3.jpg`
+            desc: '小说简介',
+            url: `${baseUrl}/openSource/20210302163508.png`
           },
 
         ]
